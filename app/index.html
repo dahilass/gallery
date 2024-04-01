@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Галерея</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.svg" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/fonts.css" />
+        <link rel="stylesheet" href="css/style.min.css" />
+        <link rel="shortcut icon" href="favicon.svg" type="image/x-icon" />
+
+        <script src="js/gsap.min.js" defer></script>
+        <script src="js/InertiaPlugin.min.js" defer></script>
+        <script src="js/Draggable.min.js" defer></script>
+        <script src="js/main.js" defer></script>
+
+        <style>
+            .gallery {
+              opacity: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+        <button class="theme-changer theme-changer_hidden" type="button">
+            <svg
+                stroke-width="0"
+                version="1.2"
+                baseProfile="tiny"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <g>
+                    <path
+                        d="M12 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14c-3.314 0-6-2.686-6-6s2.686-6 6-6 6 2.686 6 6-2.686 6-6 6zM12 7v10c2.757 0 5-2.243 5-5s-2.243-5-5-5z"
+                    ></path>
+                </g>
+            </svg>
+        </button>
+
+        <h1 class="header">
+            Галерея <span class="percents">Загрузка...</span>
+        </h1>
+        <div class="progress-bar"></div>
+
+        <div class="wrapper">
+            <div class="gallery">
+                <div class="gallery__item">
+                    <img src="./img/1.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/2.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/3.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/4.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/5.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/6.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/7.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/8.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/9.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/10.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/11.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/12.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/13.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/14.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/15.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/16.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/17.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/18.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/19.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/20.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/1.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/2.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/3.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/4.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/5.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/6.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/7.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/8.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/9.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/10.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/11.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/12.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/13.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/14.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/15.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/16.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/17.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/18.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/19.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/20.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/1.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/2.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/3.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/4.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/5.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/6.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/7.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/8.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/9.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/10.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/11.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/12.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/13.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/14.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/15.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/16.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/17.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/18.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/19.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/20.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/1.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/2.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/3.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/4.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/5.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/6.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/7.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/8.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/9.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/10.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/11.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/12.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/13.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/14.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/15.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/16.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/17.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/18.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/19.jpg" alt="Alt" />
+                </div>
+                <div class="gallery__item">
+                    <img src="./img/20.jpg" alt="Alt" />
+                </div>
+            </div>
+        </div>
+
+        <script async>
+            const percents = document.querySelector('.percents');
+            const gallery = document.querySelectorAll('img, video');
+            let i = 0;
+
+            gallery.forEach((file, index) => {
+              file.onload = () => {
+                percents.innerHTML = `Загрузка ${Math.floor(
+                  (i / gallery.length) * 100
+                )}%`;
+                i++;
+              };
+              if (i === gallery.length) {
+                percents.innerHTML = 100;
+              }
+            });
+        </script>
+    </body>
+</html>
